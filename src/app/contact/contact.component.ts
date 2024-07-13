@@ -26,6 +26,7 @@ export class ContactComponent {
 
 
   constructor(private dbData: DataDbService){
+    console.log("Holaaaaaaaa Prueba", this.dbData)
     this.contactForm = this.createFormGroup();
   }
 
