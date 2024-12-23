@@ -1,0 +1,22 @@
+<h3>Listado de Personajes</h3>
+<ul class="list-group">
+  <li
+    class="list-group-item d-flex justify-content-between align-items-center"
+    *ngFor="let personaje of personajes; let i = index"
+  >
+    {{ i + 1 }}. {{ personaje.nombre }} - <strong>Poder: {{ personaje.poder }}</strong>
+    <button class="btn btn-danger" (click)="onDelete(i)">X</button>
+  </li>
+</ul>
+<h4 class="mt-5">Filtrar Personajes</h4>
+<input
+    type="number"
+    placeholder="Filtrar por poder mínimo"
+    class="form-control mb-2"
+    #poderInput
+/>
+<button
+    class="btn btn-secondary"
+    (click)="filtrarPersonajes(+poderInput.value)">
+    Filtrar
+</button>

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-milo',
@@ -7,4 +7,13 @@ import { Component } from '@angular/core';
 })
 export class MiloComponent {
 
+
+  fecha: string = ''; // Esta variable es la que actualizarás para mostrar la fecha
+
+  mostrar() {
+    this.fecha = new Date().toString(); // Actualiza la fecha con la fecha actual
+  }
+
 }
+
+

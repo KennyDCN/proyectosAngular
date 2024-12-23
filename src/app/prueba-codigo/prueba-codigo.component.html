@@ -1,0 +1,78 @@
+<!-- <h1>Contador</h1>
+<p>Valor del contador: {{ contador }}</p>
+<button (click)="resetCounter()">Reiniciar contador</button>
+
+<hr>
+
+<h2>Controles del contador</h2>
+
+<app-prueba-input 
+[counter]="contador" 
+(counterChange)="updateCounter($event)">
+</app-prueba-input> -->
+
+<!-- <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th class="text-center">Columna 1</th>
+        <th class="text-center">Columna 2</th>
+        <th class="text-center">Columna 3</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let row of [1, 2, 3, 4]; let i = index">
+        <td> {{ i + 1 }}, </td>
+        <td>{{ i + 1 }},</td>
+        <td>
+        
+          <app-prueba-input 
+          (sumaNumero)="mostrarTotal($event)"
+          [value]="null" 
+          (valueCha)="updateTotal($event)">
+        </app-prueba-input>
+        </td>
+      </tr>
+    </tbody>
+  </table> -->
+  
+  <!-- <footer class="bg_light" style="padding: 10px 0; text-align: center;">
+    <label style="font-weight: bold;">Totales: {{ total }}</label>
+  </footer> -->
+  
+  <div>
+  <h1>Nombre:</h1>
+  <li *ngFor="let nombre of nombres">
+    {{ nombre }}
+  </li>
+  <button *ngIf="!ocultarBoton()"(click)="cambiarNombre()">CambiarNombre</button>
+  </div>
+  
+
+  <!-- <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th class="text-center">Columna A</th>
+        <th class="text-center">Columna B</th>
+        <th class="text-center">Resultado</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let fila of filas; let i = index">
+        <td>{{ fila.a }}</td>
+        <td>{{ fila.b }}</td>
+        <td>
+          <app-prueba-input 
+            [a]="fila.a" 
+            [b]="fila.b" 
+            (sumaNumero)="actualizarResultado(i, $event)">
+          </app-prueba-input>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  
+ 
+  <div *ngFor="let resultado of resultados; let i = index">
+    <p>El resultado de la fila {{ i + 1 }} es: {{ resultado }}</p>
+  </div>
+   -->

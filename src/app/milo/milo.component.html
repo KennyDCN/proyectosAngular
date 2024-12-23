@@ -51,3 +51,12 @@
       </form>
     </mat-card-content>
   </mat-card>
+
+  <h1>EVENTOS</h1>
+  <div>
+    <!-- Este div mostrará la fecha cuando el usuario haga clic en el botón -->
+    <div id="seleccionable">{{ fecha }}</div>
+  
+    <!-- Botón que dispara la acción mostrar() -->
+    <button (click)="mostrar()">Mostrar Fecha</button>
+  </div>

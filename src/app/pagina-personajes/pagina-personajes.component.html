@@ -1,0 +1,42 @@
+<div class="container">
+  <h1>Personajes</h1>
+  <hr />
+
+  <div class="row">
+    <div class="col">
+      <!-- Componente Lista -->
+      <app-lista-personajes
+        [personajes]="listaPersonajes.personajes"
+        [listPerson]="listaPersonajes.personajes"
+        (filterPerson)="listaPersonajes.actualizarListaFiltrada($event)"
+        (deletePersonaje)="listaPersonajes.onDeletePersonaje($event)"
+      ></app-lista-personajes>
+    </div>
+
+    <div class="col">
+      <!-- Formulario para Agregar -->
+      <h3>Agregar Personaje</h3>
+      <form (submit)="listaPersonajes.onNewPersonaje({ nombre: listaPersonajes.newNombre, poder: listaPersonajes.newPoder || 0})">
+        <input
+          type="text"
+          placeholder="Nombre"
+          [(ngModel)]="listaPersonajes.newNombre"
+          name="nombre"
+          required
+          class="form-control mb-2"
+        />
+        <input
+          type="number"
+          placeholder="Poder"
+          [(ngModel)]="listaPersonajes.newPoder"
+          name="poder"
+          required
+          class="form-control mb-2"
+        />
+        <button
+        type="submit"
+        class="btn btn-primary">Agregar</button>
+      </form>
+    </div>
+  </div>
+</div>

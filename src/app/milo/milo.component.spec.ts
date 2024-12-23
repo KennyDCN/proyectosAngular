@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { MiloComponent } from './milo.component';
+import { MatCard, MatCardHeader, MatCardModule } from '@angular/material/card';
 
 describe('MiloComponent', () => {
   let component: MiloComponent;
@@ -8,10 +9,11 @@ describe('MiloComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [MiloComponent]
+      declarations: [MiloComponent],
+      imports: [MatCardModule]
     })
     .compileComponents();
-    
+
     fixture = TestBed.createComponent(MiloComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();

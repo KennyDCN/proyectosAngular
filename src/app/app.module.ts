@@ -10,18 +10,26 @@ import { ContactComponent } from './contact/contact.component';
 import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DataDbService } from './services/data-db.service';
 
 
 import { firebaseConfig } from '../environments/firebase-config';
+import { PruebaCodigoComponent } from './prueba-codigo/prueba-codigo.component';
+import { PruebaInputComponent } from './prueba-input/prueba-input.component';
+import { ListaPersonajesComponent } from './lista-personajes/lista-personajes.component';
+import { PaginaPersonajesComponent } from './pagina-personajes/pagina-personajes.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MiloComponent,
-    ContactComponent
-  ],
+    ContactComponent,
+    PruebaCodigoComponent,
+    PruebaInputComponent,
+      ListaPersonajesComponent,
+      PaginaPersonajesComponent
+   ],
   imports: [
     BrowserModule,
     MatCardModule,
@@ -29,6 +37,7 @@ import { firebaseConfig } from '../environments/firebase-config';
     AngularFireAuthModule,
     AngularFirestoreModule,
     ReactiveFormsModule,
+    FormsModule,
     AppRoutingModule
   ],
   providers: [

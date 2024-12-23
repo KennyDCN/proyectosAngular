@@ -21,6 +21,12 @@ export class ContactComponent {
     })
   }
 
+ 
+
+
+
+
+
 
   contactForm: FormGroup;
 
@@ -28,8 +34,20 @@ export class ContactComponent {
   constructor(private dbData: DataDbService){
     console.log("Holaaaaaaaa Prueba", this.dbData)
     this.contactForm = this.createFormGroup();
+    console.log(this.respuesta);
   }
 
+   num: string = "22";
+
+   /*sumarDecena(numero: number){
+
+    return numero + 12
+
+   }*/
+
+    sumarDecena = ()  => parseInt(this.num) + 22
+
+  respuesta = this.sumarDecena();
 
 
   onResetForm(){
